@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
@@ -30,83 +30,108 @@ body {
   border: 1px solid black;
   border-radius: 10px;
 }
-#header{
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+#header {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
-.input-field{
-    padding: 0 0 20px 0 ;
+.input-field {
+  padding: 0 0 20px 0;
 }
 .input-field input:focus {
   outline: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
-#inp{
-    width: 90%;
-    border: none;
-    border-bottom: 1px solid black;
-    font-family: 'Gilroy', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 8px 0;
+#inp {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "Gilroy", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 8px 0;
 }
-.tasks{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: 500;
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .tasks label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
-.btn{
-    cursor: pointer;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 600;
+.btn {
+  cursor: pointer;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
 }
-#inp-btn{
-    width: 30px;
-    height: 30px;
-    background: #000;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 700;
+#inp-btn {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
-#inp-btn:hover{
-    background: rgb(211, 210, 210);
-    color: black;
+#inp-btn:hover {
+  background: rgb(211, 210, 210);
+  color: black;
 }
-#del-btn{
-    width: 30px;
-    height: 30px;
-    border: none;
-    background:none;
-    font-size: 20px;
+.task .btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  font-size: 20px;
 }
-#del-btn:hover{
-    color: red;
+.task .btn:hover {
+  color: red;
 }
-.details{
-    margin-top: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #333;
+.details {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
 }
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Define the line-through style */
+.completed {
+  text-decoration: line-through;
+  color: #888; /* Optional: dims the text color */
+}
+
 
 @media (max-width: 768px) {
   .main-wrapper {
