@@ -14,6 +14,7 @@ body {
 }
 .main {
   max-width: 100%;
+  flex-wrap: wrap;
 }
 .main-wrapper {
   display: flex;
@@ -105,4 +106,54 @@ body {
     font-size: 0.875rem;
     font-weight: 500;
     color: #333;
+}
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    padding: 40px 20px;
+  }
+  #header {
+    font-size: 1.75rem;
+  }
+  .tasks {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    padding: 20px 10px;
+    align-items: flex-start;
+    min-height: 100dvh;
+  }
+  .main-items {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  #header {
+    font-size: 1.5rem;
+  }
+  #inp {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+  #inp-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  .tasks {
+    font-size: 0.85rem;
+    padding: 6px;
+    border-radius: 8px;
+  }
+  #del-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+  .details {
+    font-size: 0.8rem;
+  }
 }
