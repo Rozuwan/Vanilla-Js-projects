@@ -20,6 +20,7 @@ addBtn.addEventListener("click", () => {
   });
   label.appendChild(checkbox);
   label.append(taskText);
+
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "×";
   deleteBtn.classList.add("btn");
@@ -28,6 +29,7 @@ addBtn.addEventListener("click", () => {
     totalTask--;
     span.textContent = totalTask;
   });
+  
   task.append(label, deleteBtn);
   taskContainer.append(task);
   totalTask++;
