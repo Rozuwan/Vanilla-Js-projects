@@ -34,7 +34,15 @@ body {
   align-items: center;
   margin: 30px 0 30px 0;
 }
-
+#income h2{
+    color: rgb(23, 43, 222);
+}
+#expense h2{
+    color:rgb(239, 39, 39);
+}
+#balance h2{
+    color: rgb(27, 201, 27);
+}
 #description {
   width: 100%;
   margin: 30px 0 30px 0;
