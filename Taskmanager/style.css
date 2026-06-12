@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
+  background-color: rgb(254, 238, 217);
 }
 .main {
   max-width: 100%;
@@ -52,6 +53,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   padding: 8px 0;
+  background-color: rgb(254, 238, 217);
 }
 .tasks {
   display: flex;
@@ -132,6 +134,10 @@ body {
   color: #888; /* Optional: dims the text color */
 }
 
+/* checkbox custom color */
+.tasks input {
+    accent-color: rgb(0, 0, 0);
+}
 
 @media (max-width: 768px) {
   .main-wrapper {
