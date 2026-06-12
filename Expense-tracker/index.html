@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-wrapper">
+            <h1>Expense Tracker</h1>
+            <div class="top">
+                <div id="balance">
+                    <h2>Balance<span>Rs0</span></h2>
+                </div>
+                <div id="income">
+                    <h2>Income <span>Rs0</span></h2>
+                </div>
+                <div id="expense">
+                    <h2>Expense <span>Rs0</span></h2>
+                </div>
+            </div>
+
+            <input class="text-field" id="description" type="text" placeholder="Description" />
+
+            <div class="mid">
+                <input class="text-field" id="amount" type="number" placeholder="Amount" min="0" />
+
+                <input class="text-field" id="time" type="date" placeholder="date" />
+
+                <div id="selection">
+                    <select name="methods" id="transactions">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn">
+                <button>Add Transaction</button>
+            </div>
+            <h2>Transaction History</h2>
+            <div class="transaction-list">
+                <div class="transaction-desc">
+                    <h3>salary-<span>Rs3000</span></h3>
+                    <p>2021/03/30</p>
+                </div>
+                <div id="delete-btn">
+                    <button>Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
