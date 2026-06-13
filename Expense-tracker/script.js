@@ -1,38 +1,38 @@
 const income = document.querySelector("#income span");
 const expense = document.querySelector("#expense span");
 const balance = document.querySelector("#balance span");
+
 const amount = document.querySelector("#amount");
-const time = document.querySelector("#time");
+
 const transactions = document.querySelector("#transactions");
 const addtransactions = document.querySelector("#addtransactions");
 
-let totalIncome = 0;
-let totalExpense = 0;
-let totalBalance = 0;
+let newIncome = 0;
+let newExpense = 0;
+let newBalance = 0;
 
 addtransactions.addEventListener("click", (e) => {
   e.preventDefault();
-  
-  const transactionAmt = parseFloat(amount.value);
-  const transactionType = (transactions.value);
 
-  if (isNaN(transactionAmt) || transactionAmt <= 0) {
+  const amountValue = parseFloat(amount.value);
+  const transactionType = transactions.value;
+
+  if (isNaN(amountValue) || amountValue <= 0) {
     alert("Please enter valid number");
     return;
   }
+
   if (transactionType === "income") {
-    totalIncome += transactionAmt;
-    totalBalance += transactionAmt;
-  } else if (transactionType === "expense") {
-    totalExpense += transactionAmt;
-    totalBalance -= transactionAmt;
+    newIncome += amountValue
+    newBalance += amountValue
+  } else if(transactionType === "expense") {
+    newExpense += amountValue
+    newBalance -= amountValue
   }
+  amount.value = ""
 
-  updateUI();
+  income.textContent = `Rs${newIncome}`
+  expense.textContent = `Rs${newExpense}`
+  balance.textContent = `Rs${newBalance}`
+
 });
-
-function updateUI() {
-  income.textContent = `Rs${totalIncome}`;
-  expense.textContent = `Rs${totalExpense}`;
-  balance.textContent = `Rs${totalBalance}`;
-}
