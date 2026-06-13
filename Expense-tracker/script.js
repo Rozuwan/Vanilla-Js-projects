@@ -1,25 +1,27 @@
+// selecting income expense and balance 
 const income = document.querySelector("#income span");
 const expense = document.querySelector("#expense span");
 const balance = document.querySelector("#balance span");
-
+//  selecting amount field
 const amount = document.querySelector("#amount");
-
+// transaction btn and  transaction types
 const transactions = document.querySelector("#transactions");
 const addtransactions = document.querySelector("#addtransactions");
 
+// select description
 const description = document.querySelector("#description");
-
+// select date
 const dateDetails = document.querySelector("#date");
-
+// transaction history=> list selection
 const transactionlist = document.querySelector(".transaction-list");
-
+// starting from 0 for calculating calculations
 let newIncome = 0;
 let newExpense = 0;
 let newBalance = 0;
 
 addtransactions.addEventListener("click", (e) => {
   e.preventDefault();
-
+// calculations part
   const amountValue = parseFloat(amount.value);
   const transactionType = transactions.value;
 
@@ -40,15 +42,18 @@ addtransactions.addEventListener("click", (e) => {
   expense.textContent = `Rs${newExpense}`;
   balance.textContent = `Rs${newBalance}`;
 
+  // value of description section and date section
   const descriptionValue = description.value;
   const dateValue = dateDetails.value;
 
+  // create transaction history via createElement
   const transactionContainer = document.createElement("div");
   transactionContainer.classList.add("transaction-list");
 
   const transactionDesc = document.createElement("div");
   transactionDesc.classList.add("transaction-desc");
   if (transactionType === "income") {
+    // style color
     transactionContainer.style.backgroundColor = "AliceBlue";
   } else {
     transactionContainer.style.backgroundColor = "MistyRose";
@@ -67,6 +72,7 @@ addtransactions.addEventListener("click", (e) => {
   }
   transactionDesc.append(title, date);
 
+  // delete btn inside transaction-history
   const deletebtnDiv = document.createElement("div");
   deletebtnDiv.id = "delete-btn";
 
@@ -80,9 +86,11 @@ addtransactions.addEventListener("click", (e) => {
 
   transactionContainer.append(transactionDesc, deletebtnDiv);
 
+// adding to the transaction-history div
   const transactionHistory = document.querySelector(".transaction-history");
   transactionHistory.append(transactionContainer);
 
+  // resetting value
   amount.value = "";
   description.value = "";
   dateDetails.value = "";
